@@ -17,8 +17,8 @@ if (isset($_POST['add'])) {
         $Email = $_POST['email'];
         $web_url = $_POST['web_url'];
         $description = $_POST['description'];
-        // $Uid = $_POST['uid'];
-        $insertData = "INSERT INTO `doctor_data`(`first_name`, `last_name`, `dob`, `gender`, `speciality`, `phone`, `email`, `web_url`, `img`, `description`) VALUES ('$FirstName','$LastName',' $dob','$gender','$specialty','$Phone','$Email','$web_url','$file_destination','$description')";
+        $address = $_POST['address'];
+        $insertData = "INSERT INTO `doctor_data`(`first_name`, `last_name`, `dob`, `gender`, `speciality`, `phone`, `email`, `web_url`, `img`, `description`,`address`) VALUES ('$FirstName','$LastName',' $dob','$gender','$specialty','$Phone','$Email','$web_url','$file_destination','$description','$address')";
         mysqli_query($DataBaseConnect, $insertData);
 
 

@@ -17,9 +17,10 @@ if (isset($_POST['add'])) {
     $email= $_POST['email'];
     $address= $_POST['address'];
     $description= $_POST['description'];
-    // $Uid = $_POST['uid'];
+    $occupation = $_POST['occupation'];
+    $status = $_POST['status'];
     
-    $insertData = "INSERT INTO `patients_data`(`first_name`, `last_name`,`phone`, `date`, `age`,`gender`, `email`,`address`,`img`, `description`) VALUES ('$firstname','$lastname','$phone','$date','$age','$gender','$email','$address','$file_destination','$description')";
+    $insertData = "INSERT INTO `patients_data`(`first_name`, `last_name`,`phone`, `date`, `age`,`gender`, `email`,`address`,`img`, `description`,`occupation`,`status`) VALUES ('$firstname','$lastname','$phone','$date','$age','$gender','$email','$address','$file_destination','$description','$occupation','$status')";
 
     
     mysqli_query($DataBaseConnect, $insertData);
